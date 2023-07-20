@@ -4,7 +4,7 @@ const { HttpError } = require("../utils/HttpError");
 const { ctrlWrapper } = require("../utils/ctrlWrapper");
 
 const getAll = async (req, res) => {
-    const data = await users.listProducts();
+    const data = await users.listUsers();
   
     res.json(data);
   };
