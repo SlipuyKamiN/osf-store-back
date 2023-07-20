@@ -1,0 +1,30 @@
+const fs = require("fs").promises;
+
+const usersPath = "models/user.json";
+
+const updateUsers = (users) =>
+  fs.writeFile(usersPath, JSON.stringify(users, null, 2));
+
+async function listUsers() {
+  const user = await fs.readFile(userPath, "utf-8");
+
+  return JSON.parse(user);
+}
+
+async function addUser(body) {
+    const users = (await listUsers()) || [];
+    const userToAdd = { id: nanoid(), ...body };
+  
+    users.push(userToAdd);
+  
+    await updateUsers(users);
+  
+    return userToAdd;
+  }
+
+
+module.exports = {
+    listUsers,
+    addUser
+  }
+  
