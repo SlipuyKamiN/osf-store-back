@@ -15,6 +15,7 @@ app.use(express.json())
 
 app.use('/api/products', productsRouter)
 app.use('/api/users', usersRouter)
+app.use("/api/products/images", express.static("images"))
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Not found' })
