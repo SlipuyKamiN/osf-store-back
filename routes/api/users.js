@@ -5,7 +5,8 @@ const ctrl = require("../../controllers/users");
 const schemas = require("../../schemas/users");
 const { validateBody } = require("../../middlewares/validateBody");
 
-router.post("/", validateBody(schemas.userschema), ctrl.createNew);
+router.get("/", ctrl.getAll)
+router.post("/", validateBody(schemas.userSchema), ctrl.createNew);
 
 
 module.exports = router;

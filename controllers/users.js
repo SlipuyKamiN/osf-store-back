@@ -3,6 +3,11 @@ const users = require("../models/users");
 const { HttpError } = require("../utils/HttpError");
 const { ctrlWrapper } = require("../utils/ctrlWrapper");
 
+const getAll = async (req, res) => {
+    const data = await users.listProducts();
+  
+    res.json(data);
+  };
 
 const createNew = async (req, res) => {
   const { body } = req;
@@ -18,5 +23,6 @@ const createNew = async (req, res) => {
 
 
 module.exports = {
+  getAll: ctrlWrapper(getAll),
   createNew: ctrlWrapper(createNew),
 };

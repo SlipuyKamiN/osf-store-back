@@ -1,12 +1,12 @@
 const fs = require("fs").promises;
 
-const usersPath = "models/user.json";
+const usersPath = "models/users.json";
 
 const updateUsers = (users) =>
   fs.writeFile(usersPath, JSON.stringify(users, null, 2));
 
 async function listUsers() {
-  const user = await fs.readFile(userPath, "utf-8");
+  const user = await fs.readFile(usersPath, "utf-8");
 
   return JSON.parse(user);
 }

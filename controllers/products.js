@@ -6,8 +6,9 @@ const { ctrlWrapper } = require("../utils/ctrlWrapper");
 const getAll = async (req, res) => {
   const data = await products.listProducts();
 
-  res.json(data);
+  res.status(200).json(data);
 };
+
 module.exports = {
   getAll: ctrlWrapper(getAll),
 };
