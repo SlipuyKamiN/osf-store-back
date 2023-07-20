@@ -1,3 +1,5 @@
+const { nanoid } = require("nanoid");
+
 const fs = require("fs").promises;
 
 const usersPath = "models/users.json";
@@ -12,19 +14,17 @@ async function listUsers() {
 }
 
 async function addUser(body) {
-    const users = (await listUsers()) || [];
-    const userToAdd = { id: nanoid(), ...body };
-  
-    users.push(userToAdd);
-  
-    await updateUsers(users);
-  
-    return userToAdd;
-  }
+  const users = (await listUsers()) || [];
+  const userToAdd = { id: nanoid(), ...body };
 
+  users.push(userToAdd);
+
+  await updateUsers(users);
+
+  return userToAdd;
+}
 
 module.exports = {
-    listUsers,
-    addUser
-  }
-  
+  listUsers,
+  addUser,
+};
