@@ -6,9 +6,7 @@
 
 - Response example (Array of Objects):
 
-  [
-
-  {
+  [{
   "id": "ID11",
 
   "imageUrl": "https://osf-store.onrender.com/api/products/images/item1.png",
@@ -20,25 +18,18 @@
   "description": "description",
 
   "price": 1237
-  }
-
-  ]
+  }]
 
 -- GET: All users: - https://osf-store.onrender.com/api/users:
 
 - Response example (Array of Objects):
 
-  [
-
-  {
+  [{
 
   "id": "AEZAKMI-ID",
-
   "email": "HESOYAM@mail.com"
 
-  }
-
-  ]
+  }]
 
 --POST: Create new user: https://osf-store.onrender.com/api/users:
 
@@ -48,7 +39,6 @@
 {
 
 "id": "HESOYAM-ID",
-
 "email": "example@email.com"
 
 }
