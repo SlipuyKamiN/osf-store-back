@@ -5,6 +5,7 @@
 -- GET: All products: - https://osf-store.onrender.com/api/products:
 
 - Response example (Array of Objects):
+
   [
   {
   "id": "ID11",
@@ -19,6 +20,7 @@
 -- GET: All users: - https://osf-store.onrender.com/api/users:
 
 - Response example (Array of Objects):
+
   [
   {
   "id": "AEZAKMI-ID",
