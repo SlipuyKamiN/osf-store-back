@@ -1,4 +1,4 @@
-const products = require("../models/products");
+const products = require("../models/products/products");
 
 const { HttpError } = require("../utils/HttpError");
 const { ctrlWrapper } = require("../utils/ctrlWrapper");

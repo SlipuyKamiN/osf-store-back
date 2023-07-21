@@ -1,6 +1,6 @@
 const fs = require("fs").promises;
 
-const productsPath = "models/products.json";
+const productsPath = "models/products/products.json";
 
 async function listProducts() {
   const products = await fs.readFile(productsPath, "utf-8");
@@ -9,5 +9,5 @@ async function listProducts() {
 }
 
 module.exports = {
-  listProducts
-}
+  listProducts,
+};

@@ -8,6 +8,17 @@ const userSchema = Joi.object({
       "any.required": "missing required email field",
       "string.pattern.base": "Wrong pattern",
     }),
+  password: Joi.string()
+    .pattern(
+      new RegExp(
+        "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$"
+      )
+    )
+    .required()
+    .messages({
+      "any.required": "missing required password field",
+      "string.pattern.base": "Wrong pattern",
+    }),
 });
 
 module.exports = {
