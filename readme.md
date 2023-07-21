@@ -1,31 +1,37 @@
-## GoIT Node.js Course Template Homework
+## OSF-Store Node.js Backend
 
-Виконайте форк цього репозиторію для виконання домашніх завдань (2-6)
-Форк створить репозиторій на вашому http://github.com
+--`API Endpoints:`
 
-Додайте ментора до колаборації
+-- GET: All products: - https://osf-store.onrender.com/api/products:
 
-Для кожної домашньої роботи створюйте свою гілку.
+- Response example (Array of Objects):
+  [
+  {
+  "id": "ID11",
+  "imageUrl": "https://osf-store.onrender.com/api/products/images/item1.png",
+  "title": "Kristina Dam Oak Table With White Marble Top",
+  "label": "awesome",
+  "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+  "price": 1237
+  }
+  ]
 
-- hw02
-- hw03
-- hw04
-- hw05
-- hw06
+-- GET: All users: - https://osf-store.onrender.com/api/users:
 
-Кожна нова гілка для др повинна робитися з master
+- Response example (Array of Objects):
+  [
+  {
+  "id": "AEZAKMI-ID",
+  "email": "HESOYAM@mail.com"
+  }
+  ]
 
-Після того, як ви закінчили виконувати домашнє завдання у своїй гілці, необхідно зробити пулл-реквест (PR). Потім додати ментора для рев'ю коду. Тільки після того, як ментор заапрувить PR, ви можете виконати мердж гілки з домашнім завданням у майстер.
+--POST: Create new user: https://osf-store.onrender.com/api/users:
 
-Уважно читайте коментарі ментора. Виправте зауваження та зробіть коміт у гілці з домашнім завданням. Зміни підтягнуться у PR автоматично після того, як ви відправите коміт з виправленнями на github
-Після виправлення знову додайте ментора на рев'ю коду.
+- Required body: {email: example@email.com}
+- Response example (Object, created user):
 
-- При здачі домашньої роботи є посилання на PR
-- JS-код чистий та зрозумілий, для форматування використовується Prettier
-
-### Команди:
-
-- `npm start` &mdash; старт сервера в режимі production
-- `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
-- `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
-- `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
+{
+"id": "HESOYAM-ID",
+"email": "example@email.com"
+}
